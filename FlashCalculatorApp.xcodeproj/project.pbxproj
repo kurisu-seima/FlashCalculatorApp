@@ -12,6 +12,7 @@
 		3309BAEF25A4AF830042B969 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3309BAED25A4AF830042B969 /* Main.storyboard */; };
 		3309BAF125A4AF870042B969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3309BAF025A4AF870042B969 /* Assets.xcassets */; };
 		3309BAF425A4AF870042B969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3309BAF225A4AF870042B969 /* LaunchScreen.storyboard */; };
+		3309BB0425A4C17C0042B969 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309BB0325A4C17C0042B969 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3309BAF025A4AF870042B969 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3309BAF325A4AF870042B969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3309BAF525A4AF870042B969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3309BB0325A4C17C0042B969 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		3309BAFE25A4AFEF0042B969 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3309BB0225A4C1340042B969 /* Button */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -86,6 +89,14 @@
 			children = (
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		3309BB0225A4C1340042B969 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				3309BB0325A4C17C0042B969 /* CustomButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 			files = (
 				3309BAE825A4AF830042B969 /* AppDelegate.swift in Sources */,
 				3309BAEA25A4AF830042B969 /* SceneDelegate.swift in Sources */,
+				3309BB0425A4C17C0042B969 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
