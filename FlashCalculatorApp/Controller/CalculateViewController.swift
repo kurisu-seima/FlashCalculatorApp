@@ -8,22 +8,31 @@
 import UIKit
 
 class CalculateViewController: UIViewController {
+    
+    @IBOutlet weak var calculateLabel: UILabel!
+    
+    var timer = Timer()
+    
+    var timerCount = 10
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func timerAction() {
+        timerCount -= 1
+        
+            switch timerCount {
+            case let count where count % 2 == 0 && count > 0:
+                let randomInt = Int.random(in: 1..<10)
+                calculateLabel.text = String(randomInt)
+            case 0:
+                timer.invalidate()
+                calculateLabel.text = ""
+            default:
+                calculateLabel.text = ""
+        }
     }
-    */
-
 }

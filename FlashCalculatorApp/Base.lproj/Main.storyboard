@@ -35,7 +35,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="startButtonDidTapped:" destination="Fkz-bt-7eT" eventType="touchUpInside" id="VsA-a4-JVu"/>
+                                    <action selector="startButtonDidTapped:" destination="Fkz-bt-7eT" eventType="touchUpInside" id="Ji4-fn-KO9"/>
+                                    <action selector="startButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ljA-pN-1gu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzu-Dk-yig" customClass="CustomButton" customModule="FlashCalculatorApp" customModuleProvider="target">
@@ -78,22 +79,25 @@
                             <constraint firstAttribute="bottom" secondItem="dzu-Dk-yig" secondAttribute="bottom" constant="2" id="pxh-06-ERK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="qi5-3h-dJE" id="miC-Ch-Txw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="Fkz-bt-7eT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="34.834123222748815" y="93.84615384615384"/>
+            <point key="canvasLocation" x="121" y="-252"/>
         </scene>
         <!--Calculate View Controller-->
         <scene sceneID="BJX-WM-td5">
             <objects>
-                <viewController id="oIp-23-5Yi" customClass="CalculateViewController" customModule="FlashCalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Calculate" id="oIp-23-5Yi" customClass="CalculateViewController" customModule="FlashCalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Jn-FT-tIV">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgp-dt-5UV">
-                                <rect key="frame" x="206.66666666666663" y="0.0" width="431" height="390"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgp-dt-5UV">
+                                <rect key="frame" x="422" y="0.0" width="0.0" height="390"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="200"/>
                                 <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -107,6 +111,9 @@
                             <constraint firstItem="bgp-dt-5UV" firstAttribute="centerX" secondItem="1Jn-FT-tIV" secondAttribute="centerX" id="G4x-rJ-esM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calculateLabel" destination="bgp-dt-5UV" id="Y4r-XW-eGo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a33-6p-K3M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
