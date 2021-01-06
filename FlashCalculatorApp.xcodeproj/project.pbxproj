@@ -13,6 +13,8 @@
 		3309BAF125A4AF870042B969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3309BAF025A4AF870042B969 /* Assets.xcassets */; };
 		3309BAF425A4AF870042B969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3309BAF225A4AF870042B969 /* LaunchScreen.storyboard */; };
 		3309BB0425A4C17C0042B969 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309BB0325A4C17C0042B969 /* CustomButton.swift */; };
+		3309E30D25A5812D00EB2932 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309E30C25A5812D00EB2932 /* TopViewController.swift */; };
+		3309E31525A5859400EB2932 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309E31425A5859400EB2932 /* CalculateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		3309BAF325A4AF870042B969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3309BAF525A4AF870042B969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3309BB0325A4C17C0042B969 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		3309E30C25A5812D00EB2932 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		3309E31425A5859400EB2932 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 		3309BAFF25A4B0010042B969 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3309E30C25A5812D00EB2932 /* TopViewController.swift */,
+				3309E31425A5859400EB2932 /* CalculateViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,8 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3309E30D25A5812D00EB2932 /* TopViewController.swift in Sources */,
 				3309BAE825A4AF830042B969 /* AppDelegate.swift in Sources */,
 				3309BAEA25A4AF830042B969 /* SceneDelegate.swift in Sources */,
+				3309E31525A5859400EB2932 /* CalculateViewController.swift in Sources */,
 				3309BB0425A4C17C0042B969 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
