@@ -15,6 +15,7 @@
 		3309BB0425A4C17C0042B969 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309BB0325A4C17C0042B969 /* CustomButton.swift */; };
 		3309E30D25A5812D00EB2932 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309E30C25A5812D00EB2932 /* TopViewController.swift */; };
 		3309E31525A5859400EB2932 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309E31425A5859400EB2932 /* CalculateViewController.swift */; };
+		3309E31925A5D38200EB2932 /* FlashNumberSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309E31825A5D38200EB2932 /* FlashNumberSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3309BB0325A4C17C0042B969 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		3309E30C25A5812D00EB2932 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		3309E31425A5859400EB2932 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
+		3309E31825A5D38200EB2932 /* FlashNumberSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashNumberSettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				3309E30C25A5812D00EB2932 /* TopViewController.swift */,
 				3309E31425A5859400EB2932 /* CalculateViewController.swift */,
+				3309E31825A5D38200EB2932 /* FlashNumberSettingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3309E30D25A5812D00EB2932 /* TopViewController.swift in Sources */,
+				3309E31925A5D38200EB2932 /* FlashNumberSettingViewController.swift in Sources */,
 				3309BAE825A4AF830042B969 /* AppDelegate.swift in Sources */,
 				3309BAEA25A4AF830042B969 /* SceneDelegate.swift in Sources */,
 				3309E31525A5859400EB2932 /* CalculateViewController.swift in Sources */,

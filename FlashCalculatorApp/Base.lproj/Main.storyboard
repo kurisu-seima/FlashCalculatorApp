@@ -53,6 +53,9 @@
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="levelChangeButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eck-f9-W7H"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vyl-Va-p2z">
                                 <rect key="frame" x="0.0" y="132" width="844" height="60"/>
@@ -119,8 +122,92 @@
             </objects>
             <point key="canvasLocation" x="829.62085308056874" y="-558.46153846153845"/>
         </scene>
+        <!--Flash Number Setting View Controller-->
+        <scene sceneID="yZz-6B-uFN">
+            <objects>
+                <viewController storyboardIdentifier="levelChange" id="Ru4-UQ-4Mb" customClass="FlashNumberSettingViewController" customModule="FlashCalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dPb-x8-0We">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAc-XW-jth">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="q0j-cz-oKz"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="難易度　　表示桁数　　表示口数　　表示速度" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cz3-gx-0ae">
+                                <rect key="frame" x="0.0" y="230" width="844" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lVQ-GJ-Ktv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Je-OY-aym">
+                                <rect key="frame" x="391" y="300" width="62" height="30"/>
+                                <state key="normal" title="情報表示">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPV-q2-SbO" customClass="CustomButton" customModule="FlashCalculatorApp" customModuleProvider="target">
+                                <rect key="frame" x="700" y="358" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="HNy-Mi-IHD"/>
+                                    <constraint firstAttribute="height" constant="30" id="wqW-FE-dOf"/>
+                                </constraints>
+                                <state key="normal" title="スタート画面">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backButtonDidTapped:" destination="GPP-vr-Q07" eventType="touchUpInside" id="9MO-Yk-V6c"/>
+                                    <action selector="backButtonDidTapped:" destination="Ru4-UQ-4Mb" eventType="touchUpInside" id="brM-oT-mcy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vxn-Gj-C5Z"/>
+                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="VPV-q2-SbO" secondAttribute="bottom" constant="2" id="Dc8-we-sSM"/>
+                            <constraint firstAttribute="trailing" secondItem="cz3-gx-0ae" secondAttribute="trailing" id="OJs-Ms-TVe"/>
+                            <constraint firstItem="cz3-gx-0ae" firstAttribute="top" secondItem="mAc-XW-jth" secondAttribute="bottom" id="OtI-eh-Hrh"/>
+                            <constraint firstItem="cz3-gx-0ae" firstAttribute="leading" secondItem="dPb-x8-0We" secondAttribute="leading" id="aCk-s7-43f"/>
+                            <constraint firstItem="3Je-OY-aym" firstAttribute="centerX" secondItem="dPb-x8-0We" secondAttribute="centerX" id="beK-sl-ZLW"/>
+                            <constraint firstItem="mAc-XW-jth" firstAttribute="top" secondItem="Vxn-Gj-C5Z" secondAttribute="top" id="eXi-2s-ZLA"/>
+                            <constraint firstAttribute="trailing" secondItem="mAc-XW-jth" secondAttribute="trailing" id="lAd-OY-bnK"/>
+                            <constraint firstItem="Vxn-Gj-C5Z" firstAttribute="trailing" secondItem="VPV-q2-SbO" secondAttribute="trailing" id="nXt-KJ-PCj"/>
+                            <constraint firstItem="mAc-XW-jth" firstAttribute="leading" secondItem="dPb-x8-0We" secondAttribute="leading" id="uDY-T3-uhq"/>
+                            <constraint firstItem="3Je-OY-aym" firstAttribute="top" secondItem="cz3-gx-0ae" secondAttribute="bottom" constant="20" id="zo8-jP-wte"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberPicker" destination="mAc-XW-jth" id="E1R-7e-0Rq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdp-01-WeG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="GPP-vr-Q07" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="827.48815165876772" y="220"/>
+        </scene>
     </scenes>
     <designables>
+        <designable name="VPV-q2-SbO">
+            <size key="intrinsicContentSize" width="92" height="30"/>
+        </designable>
         <designable name="dzu-Dk-yig">
             <size key="intrinsicContentSize" width="77" height="30"/>
         </designable>
@@ -129,6 +216,9 @@
         </designable>
     </designables>
     <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

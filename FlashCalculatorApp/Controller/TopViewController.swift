@@ -19,4 +19,8 @@ class TopViewController: UIViewController {
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "Calculate") as! CalculateViewController
         self.present(nextVC, animated: true, completion: nil)
     }
+    @IBAction func levelChangeButtonDidTapped(_ sender: Any) {
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "levelChange") as! FlashNumberSettingViewController
+        self.present(nextVC, animated: true, completion: nil)
+    }
 }
