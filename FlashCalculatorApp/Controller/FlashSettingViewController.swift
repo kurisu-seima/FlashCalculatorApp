@@ -19,7 +19,11 @@ class FlashSettingViewController: UIViewController {
     var flashSpeed = [Int](1...5)
     var numberOfQuestion = [Int](1...10)
     
-    var pickerIndexPath: IndexPath = [0, 0]
+    var pickerIndexPath: IndexPath = [0, 0] {
+        didSet {
+            pickerView.reloadAllComponents()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,22 +41,23 @@ class FlashSettingViewController: UIViewController {
     }
     
     func pickerSetUp() {
-        //ピッカービューの設定
-        pickerView.frame = CGRect(x: 0, y: self.view.frame.height / 2, width: self.view.frame.width, height: self.view.frame.height / 2)
         //サブビューの設定
-        selectArea.frame = pickerView.frame
+        selectArea.frame = CGRect(x: 0, y: self.view.frame.height / 2, width: self.view.frame.width, height: self.view.frame.height / 2)
         selectArea.backgroundColor = UIColor.gray
+        
         //ツールバーの設定
-        toolbar.frame = CGRect(x: 0, y: self.view.frame.height / 2, width: view.frame.size.width, height: 40)
+        toolbar.frame = CGRect(x: 0, y: 0, width: selectArea.frame.size.width, height: 40)
         let toolbarLabel = UILabel()
-        let toolbarTitleList = ["桁数を選択してください", "速度を選択してください", "問題数を選択してください"]
-        toolbarLabel.text = toolbarTitleList[pickerIndexPath.row]
+        toolbarLabel.text = "選択してください"
         toolbarLabel.textAlignment = .center
         let toolbarTitle = UIBarButtonItem(customView: toolbarLabel)
         let spaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let doneItem = UIBarButtonItem(title: "完了", style: .done, target: self, action: #selector(done))
         doneItem.tintColor = .systemBlue
         toolbar.setItems([toolbarTitle, spaceItem, doneItem], animated: true)
+        
+        //ピッカービューの設定
+        pickerView.frame = CGRect(x: 0, y: toolbar.frame.height, width: selectArea.frame.width, height: selectArea.frame.height - toolbar.frame.height)
         
         //追加
         self.view.addSubview(selectArea)
@@ -67,6 +72,10 @@ class FlashSettingViewController: UIViewController {
     
     @objc func done() {
         selectArea.isHidden = true
+    }
+    
+    @IBAction func moveTopVC(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
