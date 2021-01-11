@@ -15,7 +15,8 @@
 		3309BB0425A4C17C0042B969 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309BB0325A4C17C0042B969 /* CustomButton.swift */; };
 		3309E30D25A5812D00EB2932 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309E30C25A5812D00EB2932 /* TopViewController.swift */; };
 		3309E31525A5859400EB2932 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309E31425A5859400EB2932 /* CalculateViewController.swift */; };
-		3309E31925A5D38200EB2932 /* FlashNumberSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309E31825A5D38200EB2932 /* FlashNumberSettingViewController.swift */; };
+		338D8C0525A75F4E00D22794 /* FlashSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D8C0425A75F4E00D22794 /* FlashSettingViewController.swift */; };
+		33E2CA3225A94809009970F5 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E2CA3125A94809009970F5 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +30,8 @@
 		3309BB0325A4C17C0042B969 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		3309E30C25A5812D00EB2932 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		3309E31425A5859400EB2932 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
-		3309E31825A5D38200EB2932 /* FlashNumberSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashNumberSettingViewController.swift; sourceTree = "<group>"; };
+		338D8C0425A75F4E00D22794 /* FlashSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashSettingViewController.swift; sourceTree = "<group>"; };
+		33E2CA3125A94809009970F5 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		3309BAFE25A4AFEF0042B969 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				33E2CA3425A94812009970F5 /* Cell */,
 				3309BB0225A4C1340042B969 /* Button */,
 			);
 			path = View;
@@ -95,7 +98,7 @@
 			children = (
 				3309E30C25A5812D00EB2932 /* TopViewController.swift */,
 				3309E31425A5859400EB2932 /* CalculateViewController.swift */,
-				3309E31825A5D38200EB2932 /* FlashNumberSettingViewController.swift */,
+				338D8C0425A75F4E00D22794 /* FlashSettingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -106,6 +109,14 @@
 				3309BB0325A4C17C0042B969 /* CustomButton.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		33E2CA3425A94812009970F5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				33E2CA3125A94809009970F5 /* CustomTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,8 +190,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3309E30D25A5812D00EB2932 /* TopViewController.swift in Sources */,
-				3309E31925A5D38200EB2932 /* FlashNumberSettingViewController.swift in Sources */,
 				3309BAE825A4AF830042B969 /* AppDelegate.swift in Sources */,
+				338D8C0525A75F4E00D22794 /* FlashSettingViewController.swift in Sources */,
+				33E2CA3225A94809009970F5 /* CustomTableViewCell.swift in Sources */,
 				3309BAEA25A4AF830042B969 /* SceneDelegate.swift in Sources */,
 				3309E31525A5859400EB2932 /* CalculateViewController.swift in Sources */,
 				3309BB0425A4C17C0042B969 /* CustomButton.swift in Sources */,
