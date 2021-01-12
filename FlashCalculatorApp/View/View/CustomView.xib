@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="FlashCalculatorApp" customModuleProvider="target">
+            <connections>
+                <outlet property="pickerView" destination="ff2-ID-Q8C" id="VaD-on-xlu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ff2-ID-Q8C">
+                    <rect key="frame" x="0.0" y="44" width="844" height="346"/>
+                </pickerView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRo-0r-ITk">
+                    <rect key="frame" x="0.0" y="0.0" width="844" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHc-xN-IwF">
+                            <rect key="frame" x="783" y="5" width="31" height="30"/>
+                            <state key="normal" title="完了">
+                                <color key="titleColor" systemColor="systemBlueColor"/>
+                            </state>
+                            <connections>
+                                <action selector="doneButtonDidTapped:" destination="-1" eventType="touchUpInside" id="XoG-DI-cOb"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選択してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Se1-b3-NZz">
+                            <rect key="frame" x="352.5" y="9.5" width="139" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Se1-b3-NZz" firstAttribute="centerY" secondItem="DRo-0r-ITk" secondAttribute="centerY" id="1CL-dk-O7b"/>
+                        <constraint firstAttribute="trailing" secondItem="oHc-xN-IwF" secondAttribute="trailing" constant="30" id="1ZP-6g-2iz"/>
+                        <constraint firstAttribute="height" constant="40" id="Xpz-NP-YkC"/>
+                        <constraint firstItem="oHc-xN-IwF" firstAttribute="top" secondItem="DRo-0r-ITk" secondAttribute="top" constant="5" id="orX-15-drh"/>
+                        <constraint firstItem="Se1-b3-NZz" firstAttribute="centerX" secondItem="DRo-0r-ITk" secondAttribute="centerX" id="yMj-Iz-y0Z"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="DRo-0r-ITk" secondAttribute="trailing" id="BCv-l6-Q4O"/>
+                <constraint firstItem="ff2-ID-Q8C" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="EVi-dr-2hE"/>
+                <constraint firstAttribute="bottom" secondItem="ff2-ID-Q8C" secondAttribute="bottom" id="SDv-X1-jnq"/>
+                <constraint firstItem="DRo-0r-ITk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UEv-v9-o1r"/>
+                <constraint firstItem="ff2-ID-Q8C" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="g10-uU-pLA"/>
+                <constraint firstItem="ff2-ID-Q8C" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="jn8-e0-y40"/>
+                <constraint firstItem="DRo-0r-ITk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="m9E-OZ-lhM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="111.59420289855073" y="108.48214285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

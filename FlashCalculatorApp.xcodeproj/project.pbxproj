@@ -15,8 +15,11 @@
 		3309BB0425A4C17C0042B969 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309BB0325A4C17C0042B969 /* CustomButton.swift */; };
 		3309E30D25A5812D00EB2932 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309E30C25A5812D00EB2932 /* TopViewController.swift */; };
 		3309E31525A5859400EB2932 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309E31425A5859400EB2932 /* CalculateViewController.swift */; };
+		338D590F25ADEC5E00760925 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 338D590E25ADEC5E00760925 /* CustomView.xib */; };
+		338D591425ADF31B00760925 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D591325ADF31B00760925 /* CustomView.swift */; };
 		338D8C0525A75F4E00D22794 /* FlashSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D8C0425A75F4E00D22794 /* FlashSettingViewController.swift */; };
-		33E2CA3225A94809009970F5 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E2CA3125A94809009970F5 /* CustomTableViewCell.swift */; };
+		338EE95725AC412B00EBACFF /* FlashStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338EE95625AC412B00EBACFF /* FlashStatus.swift */; };
+		338EE95A25AC42EB00EBACFF /* FlashStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338EE95925AC42EB00EBACFF /* FlashStatusManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +33,11 @@
 		3309BB0325A4C17C0042B969 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		3309E30C25A5812D00EB2932 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		3309E31425A5859400EB2932 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
+		338D590E25ADEC5E00760925 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		338D591325ADF31B00760925 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		338D8C0425A75F4E00D22794 /* FlashSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashSettingViewController.swift; sourceTree = "<group>"; };
-		33E2CA3125A94809009970F5 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		338EE95625AC412B00EBACFF /* FlashStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashStatus.swift; sourceTree = "<group>"; };
+		338EE95925AC42EB00EBACFF /* FlashStatusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashStatusManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,8 @@
 		3309BAFD25A4AFE70042B969 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				338EE95625AC412B00EBACFF /* FlashStatus.swift */,
+				338EE95925AC42EB00EBACFF /* FlashStatusManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -87,7 +95,7 @@
 		3309BAFE25A4AFEF0042B969 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				33E2CA3425A94812009970F5 /* Cell */,
+				338D591125ADEC6E00760925 /* View */,
 				3309BB0225A4C1340042B969 /* Button */,
 			);
 			path = View;
@@ -111,12 +119,13 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
-		33E2CA3425A94812009970F5 /* Cell */ = {
+		338D591125ADEC6E00760925 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				33E2CA3125A94809009970F5 /* CustomTableViewCell.swift */,
+				338D591325ADF31B00760925 /* CustomView.swift */,
+				338D590E25ADEC5E00760925 /* CustomView.xib */,
 			);
-			path = Cell;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3309BAF425A4AF870042B969 /* LaunchScreen.storyboard in Resources */,
+				338D590F25ADEC5E00760925 /* CustomView.xib in Resources */,
 				3309BAF125A4AF870042B969 /* Assets.xcassets in Resources */,
 				3309BAEF25A4AF830042B969 /* Main.storyboard in Resources */,
 			);
@@ -192,9 +202,11 @@
 				3309E30D25A5812D00EB2932 /* TopViewController.swift in Sources */,
 				3309BAE825A4AF830042B969 /* AppDelegate.swift in Sources */,
 				338D8C0525A75F4E00D22794 /* FlashSettingViewController.swift in Sources */,
-				33E2CA3225A94809009970F5 /* CustomTableViewCell.swift in Sources */,
+				338D591425ADF31B00760925 /* CustomView.swift in Sources */,
 				3309BAEA25A4AF830042B969 /* SceneDelegate.swift in Sources */,
 				3309E31525A5859400EB2932 /* CalculateViewController.swift in Sources */,
+				338EE95A25AC42EB00EBACFF /* FlashStatusManager.swift in Sources */,
+				338EE95725AC412B00EBACFF /* FlashStatus.swift in Sources */,
 				3309BB0425A4C17C0042B969 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

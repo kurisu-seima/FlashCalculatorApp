@@ -9,69 +9,25 @@ import UIKit
 
 class FlashSettingViewController: UIViewController {
 
-    @IBOutlet weak var myTableView: UITableView!
-    
-    var pickerView = UIPickerView()
-    var toolbar = UIToolbar()
-    var selectArea = UIView()
+    @IBOutlet weak var customView: CustomView!
+    @IBOutlet weak var selectAreaHeight: NSLayoutConstraint!
 
-    var digit = [Int](1...5)
-    var flashSpeed = [Int](1...5)
-    var numberOfQuestion = [Int](1...10)
+    @IBOutlet weak var digitLabel: UILabel!
+    @IBOutlet weak var flashSpeedLabel: UILabel!
+    @IBOutlet weak var numberOfQuestionLabel: UILabel!
     
-    var pickerIndexPath: IndexPath = [0, 0] {
-        didSet {
-            pickerView.reloadAllComponents()
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        myTableView.delegate = self
-        myTableView.dataSource = self
-        
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        
-        self.pickerSetUp()
     }
     
-    @IBAction func saveButtonDidTapped(_ sender: Any) {
-    }
-    
-    func pickerSetUp() {
-        //サブビューの設定
-        selectArea.frame = CGRect(x: 0, y: self.view.frame.height / 2, width: self.view.frame.width, height: self.view.frame.height / 2)
-        selectArea.backgroundColor = UIColor.gray
-        
-        //ツールバーの設定
-        toolbar.frame = CGRect(x: 0, y: 0, width: selectArea.frame.size.width, height: 40)
-        let toolbarLabel = UILabel()
-        toolbarLabel.text = "選択してください"
-        toolbarLabel.textAlignment = .center
-        let toolbarTitle = UIBarButtonItem(customView: toolbarLabel)
-        let spaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        let doneItem = UIBarButtonItem(title: "完了", style: .done, target: self, action: #selector(done))
-        doneItem.tintColor = .systemBlue
-        toolbar.setItems([toolbarTitle, spaceItem, doneItem], animated: true)
-        
-        //ピッカービューの設定
-        pickerView.frame = CGRect(x: 0, y: toolbar.frame.height, width: selectArea.frame.width, height: selectArea.frame.height - toolbar.frame.height)
-        
-        //追加
-        self.view.addSubview(selectArea)
-        selectArea.addSubview(pickerView)
-        selectArea.addSubview(toolbar)
-        selectArea.isHidden = true
-    }
-    
-    func openPicker() {
-        selectArea.isHidden = false
-    }
-    
-    @objc func done() {
-        selectArea.isHidden = true
+    @IBAction func settingButtonDidTapped(_ sender: UIButton) {
+        customView.buttonTag = sender.tag
+        customView.delegate = self
+        selectAreaHeight.constant = 200
+        customView.isHidden = false
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
     }
     
     @IBAction func moveTopVC(_ sender: Any) {
@@ -79,58 +35,23 @@ class FlashSettingViewController: UIViewController {
     }
 }
 
-//テーブルビュー
-extension FlashSettingViewController: UITableViewDataSource, UITableViewDelegate, UITextViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
-        cell.setUp(index: indexPath.row)
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        pickerIndexPath = indexPath
-        self.openPicker()
-    }
-}
-
-//ピッカービュー
-extension FlashSettingViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        switch pickerIndexPath.row {
-        case 0:
-            return digit.count
-        case 1:
-            return flashSpeed.count
-        case 2:
-            return numberOfQuestion.count
-        default:
-            return 0
+extension FlashSettingViewController: CustomViewDelegate {
+    func closePicker(selected: String) {
+        selectAreaHeight.constant = 0
+        customView.isHidden = true
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
         }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch pickerIndexPath.row {
+        
+        switch customView.buttonTag {
         case 0:
-            return String(digit[row])
+            digitLabel.text = selected
         case 1:
-            return String(flashSpeed[row])
+            flashSpeedLabel.text = selected
         case 2:
-            return String(numberOfQuestion[row])
+            numberOfQuestionLabel.text = selected
         default:
-            return "何も入っていません"
+            break
         }
     }
 }
