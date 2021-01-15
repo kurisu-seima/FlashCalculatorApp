@@ -42,7 +42,7 @@ class CustomView: UIView {
     }
 
     @IBAction func doneButtonDidTapped(_ sender: Any) {
-        let pickerNumber = pickerView.selectedRow(inComponent: 0) //インデックス番号になるので0から始まる
+        let pickerNumber = pickerView.selectedRow(inComponent: 0)
         guard let pickerItem = pickerView(pickerView, titleForRow: pickerNumber, forComponent: 0) else {
             return
         }

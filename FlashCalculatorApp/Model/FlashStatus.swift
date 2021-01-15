@@ -7,7 +7,8 @@
 
 import Foundation
 
-class FlashStatus {
+class FlashStatus: Codable {
+    
     var digit: Int
     var flashSpeed: Int
     var numberOfQuestion: Int

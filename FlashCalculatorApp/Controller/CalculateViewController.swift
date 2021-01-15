@@ -13,26 +13,35 @@ class CalculateViewController: UIViewController {
     
     var timer = Timer()
     
-    var timerCount = 10
+    var timerCount = FlashCalculatorManager.shared.numberOfQuestion * FlashCalculatorManager.shared.flashSpeed + FlashCalculatorManager.shared.flashSpeed
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: Double(FlashCalculatorManager.shared.flashSpeed), target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
     }
     
     @objc func timerAction() {
-        timerCount -= 1
+        timerCount -= FlashCalculatorManager.shared.flashSpeed
         
-            switch timerCount {
-            case let count where count % 2 == 0 && count > 0:
-                let randomInt = Int.random(in: 1..<10)
-                calculateLabel.text = String(randomInt)
-            case 0:
-                timer.invalidate()
-                calculateLabel.text = ""
-            default:
-                calculateLabel.text = ""
+        if timerCount != 0 {
+            let randomInt = Int.random(in: 10...99)
+            calculateLabel.text = String(randomInt)
+        } else {
+            timer.invalidate()
+            calculateLabel.text = "終わり"
         }
     }
 }
+
+
+/* switch timerCount {
+case let count where count % 2 == 0 && count > 0:
+    let randomInt = Int.random(in: 1..<10)
+    calculateLabel.text = String(randomInt)
+case 0:
+    timer.invalidate()
+    calculateLabel.text = ""
+default:
+    calculateLabel.text = ""
+ */

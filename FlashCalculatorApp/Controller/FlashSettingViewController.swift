@@ -46,10 +46,13 @@ extension FlashSettingViewController: CustomViewDelegate {
         switch customView.buttonTag {
         case 0:
             digitLabel.text = selected
+            FlashCalculatorManager.shared.numberOfDigit = Int(selected)!
         case 1:
             flashSpeedLabel.text = selected
+            FlashCalculatorManager.shared.flashSpeed = Int(selected)!
         case 2:
             numberOfQuestionLabel.text = selected
+            FlashCalculatorManager.shared.numberOfQuestion = Int(selected)!
         default:
             break
         }
