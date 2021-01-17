@@ -13,35 +13,38 @@ class CalculateViewController: UIViewController {
     
     var timer = Timer()
     
-    var timerCount = FlashCalculatorManager.shared.numberOfQuestion * FlashCalculatorManager.shared.flashSpeed + FlashCalculatorManager.shared.flashSpeed
-
+    var timerCount = FlashCalculatorManager.shared.numberOfQuestion + 1
+    
+    var gokei: Int = 0
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        startTimer()
+    }
+    
+    func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: Double(FlashCalculatorManager.shared.flashSpeed), target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
     }
     
     @objc func timerAction() {
-        timerCount -= FlashCalculatorManager.shared.flashSpeed
+        timerCount -= 1
         
-        if timerCount != 0 {
-            let randomInt = Int.random(in: 10...99)
-            calculateLabel.text = String(randomInt)
-        } else {
+        if timerCount == 0 {
             timer.invalidate()
             calculateLabel.text = "終わり"
+        } else {
+            var digitNumber = String(Int.random(in: 1...9))
+            for count in 1...FlashCalculatorManager.shared.numberOfDigit {
+                if count == 1 {
+                    gokei += Int(digitNumber)!
+                    calculateLabel.text = String(digitNumber)
+                } else {
+                    digitNumber += String(Int.random(in: 0...9))
+                    gokei += Int(digitNumber)!
+                    calculateLabel.text = String(digitNumber)
+                }
+            }
         }
     }
 }
-
-
-/* switch timerCount {
-case let count where count % 2 == 0 && count > 0:
-    let randomInt = Int.random(in: 1..<10)
-    calculateLabel.text = String(randomInt)
-case 0:
-    timer.invalidate()
-    calculateLabel.text = ""
-default:
-    calculateLabel.text = ""
- */

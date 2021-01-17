@@ -19,6 +19,7 @@ class TopViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         titlelabel.text = "\(FlashCalculatorManager.shared.numberOfDigit)桁 \(FlashCalculatorManager.shared.flashSpeed)秒間隔 \(FlashCalculatorManager.shared.numberOfQuestion)問"
     }
     
@@ -28,6 +29,7 @@ class TopViewController: UIViewController {
     }
     @IBAction func levelChangeButtonDidTapped(_ sender: Any) {
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "levelChange") as! FlashSettingViewController
+        nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: true, completion: nil)
     }
 }

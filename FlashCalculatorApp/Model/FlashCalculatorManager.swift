@@ -13,7 +13,7 @@ class FlashCalculatorManager {
     static let shared = FlashCalculatorManager()
     
     var numberOfDigit = 2
-    var numberOfQuestion = 10
     var flashSpeed = 1
+    var numberOfQuestion = 10
     
 }
