@@ -38,13 +38,12 @@ class CalculateViewController: UIViewController {
             for count in 1...FlashCalculatorManager.shared.numberOfDigit {
                 if count == 1 {
                     gokei += Int(digitNumber)!
-                    calculateLabel.text = String(digitNumber)
                 } else {
                     digitNumber += String(Int.random(in: 0...9))
                     gokei += Int(digitNumber)!
-                    calculateLabel.text = String(digitNumber)
                 }
             }
+            calculateLabel.text = digitNumber
         }
     }
 }
