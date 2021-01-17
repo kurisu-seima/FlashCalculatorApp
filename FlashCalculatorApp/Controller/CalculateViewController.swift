@@ -32,7 +32,8 @@ class CalculateViewController: UIViewController {
         
         if timerCount == 0 {
             timer.invalidate()
-            calculateLabel.text = "終わり"
+            let nextVC = storyboard?.instantiateViewController(withIdentifier: "answerVC") as! AnswerViewController
+            self.present(nextVC, animated: true, completion: nil)
         } else {
             var digitNumber = String(Int.random(in: 1...9))
             for count in 1...FlashCalculatorManager.shared.numberOfDigit {
