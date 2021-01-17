@@ -33,18 +33,23 @@ class CalculateViewController: UIViewController {
         if timerCount == 0 {
             timer.invalidate()
             let nextVC = storyboard?.instantiateViewController(withIdentifier: "answerVC") as! AnswerViewController
+            nextVC.currectAnswer = gokei
             self.present(nextVC, animated: true, completion: nil)
         } else {
-            var digitNumber = String(Int.random(in: 1...9))
-            for count in 1...FlashCalculatorManager.shared.numberOfDigit {
-                if count == 1 {
-                    gokei += Int(digitNumber)!
-                } else {
+            var digitNumber: String = ""
+            switch FlashCalculatorManager.shared.numberOfDigit {
+            case 1:
+                digitNumber = String(Int.random(in: 1...9))
+                gokei += Int(digitNumber)!
+                calculateLabel.text = digitNumber
+            default:
+                for _ in 1...FlashCalculatorManager.shared.numberOfDigit {
                     digitNumber += String(Int.random(in: 0...9))
-                    gokei += Int(digitNumber)!
                 }
+                gokei += Int(digitNumber)!
+                calculateLabel.text = digitNumber
             }
-            calculateLabel.text = digitNumber
         }
     }
 }
+

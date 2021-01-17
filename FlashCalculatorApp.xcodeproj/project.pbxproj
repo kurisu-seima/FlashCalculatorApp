@@ -19,7 +19,7 @@
 		338D591425ADF31B00760925 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D591325ADF31B00760925 /* CustomView.swift */; };
 		338D8C0525A75F4E00D22794 /* FlashSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D8C0425A75F4E00D22794 /* FlashSettingViewController.swift */; };
 		33E518B725B465090028253F /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E518B625B465090028253F /* AnswerViewController.swift */; };
-		33E518BA25B47E160028253F /* CheckAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E518B925B47E150028253F /* CheckAnswerViewController.swift */; };
+		33E518BE25B486040028253F /* JudgementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E518BD25B486040028253F /* JudgementViewController.swift */; };
 		33F90A2D25B0871B008C6497 /* FlashCalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F90A2C25B0871B008C6497 /* FlashCalculatorManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 		338D591325ADF31B00760925 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		338D8C0425A75F4E00D22794 /* FlashSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashSettingViewController.swift; sourceTree = "<group>"; };
 		33E518B625B465090028253F /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
-		33E518B925B47E150028253F /* CheckAnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAnswerViewController.swift; sourceTree = "<group>"; };
+		33E518BD25B486040028253F /* JudgementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgementViewController.swift; sourceTree = "<group>"; };
 		33F90A2C25B0871B008C6497 /* FlashCalculatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCalculatorManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +109,7 @@
 				3309E31425A5859400EB2932 /* CalculateViewController.swift */,
 				338D8C0425A75F4E00D22794 /* FlashSettingViewController.swift */,
 				33E518B625B465090028253F /* AnswerViewController.swift */,
-				33E518B925B47E150028253F /* CheckAnswerViewController.swift */,
+				33E518BD25B486040028253F /* JudgementViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E518BE25B486040028253F /* JudgementViewController.swift in Sources */,
 				3309E30D25A5812D00EB2932 /* TopViewController.swift in Sources */,
 				3309BAE825A4AF830042B969 /* AppDelegate.swift in Sources */,
 				33F90A2D25B0871B008C6497 /* FlashCalculatorManager.swift in Sources */,
@@ -211,7 +212,6 @@
 				3309BAEA25A4AF830042B969 /* SceneDelegate.swift in Sources */,
 				3309E31525A5859400EB2932 /* CalculateViewController.swift in Sources */,
 				3309BB0425A4C17C0042B969 /* CustomButton.swift in Sources */,
-				33E518BA25B47E160028253F /* CheckAnswerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

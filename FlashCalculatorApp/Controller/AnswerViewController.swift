@@ -11,6 +11,8 @@ class AnswerViewController: UIViewController {
     
     @IBOutlet weak var anserTextView: UITextView!
     
+    var currectAnswer: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,8 +24,19 @@ class AnswerViewController: UIViewController {
         anserTextView.keyboardType = .numberPad
     }
     
-    @IBAction func checkAnswerButtonDidTapped(_ sender: UIButton) {
-        let nextVC = storyboard?.instantiateViewController(withIdentifier: "CheckAnswerVC") as! CheckAnswerViewController
+    @IBAction func judgementButtonDidTapped(_ sender: UIButton) {
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "JudgeVC") as! JudgementViewController
+        nextVC.delegate = self
         self.present(nextVC, animated: true, completion: nil)
+    }
+}
+
+extension AnswerViewController: JudgementViewControllerDelegate {
+    func judge(judgeLabel: UILabel) {
+        if currectAnswer == Int(anserTextView.text) ?? 0 {
+            judgeLabel.text = "正解です"
+        } else {
+            judgeLabel.text = "不正解です"
+        }
     }
 }
