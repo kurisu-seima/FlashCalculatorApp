@@ -27,7 +27,11 @@ class AnswerViewController: UIViewController {
     @IBAction func judgementButtonDidTapped(_ sender: UIButton) {
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "JudgeVC") as! JudgementViewController
         nextVC.currectAnswer = currectAnswer
-        nextVC.myAnswer = Int(anserTextView.text)!
-        self.present(nextVC, animated: true, completion: nil)
+        if let answer = Int(anserTextView.text) {
+            nextVC.myAnswer = answer
+            self.present(nextVC, animated: true, completion: nil)
+        } else {
+            anserTextView.text = "正しく入力してください"
+        }
     }
 }

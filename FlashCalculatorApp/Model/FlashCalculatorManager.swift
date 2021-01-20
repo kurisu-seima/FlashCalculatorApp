@@ -16,4 +16,13 @@ class FlashCalculatorManager {
     var flashSpeed = 1
     var numberOfQuestion = 10
     
+    var maxValue: Int {
+        return Int(Array<Int>(1...numberOfDigit).map{ _ in return "9" }.joined())!
+    }
+    
+    var minValue: Int {
+        var min = Array<Int>(1...numberOfDigit).map{ _ in return "0"}
+        min[0] = "1"
+        return Int(min.joined())!
+    }
 }

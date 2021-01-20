@@ -164,11 +164,11 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wDa-ZS-mfa">
-                                <rect key="frame" x="297" y="40" width="250" height="50"/>
+                                <rect key="frame" x="247" y="40" width="350" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="U9Q-92-gqe"/>
-                                    <constraint firstAttribute="width" constant="250" id="lrt-PG-Hge"/>
+                                    <constraint firstAttribute="width" constant="350" id="lrt-PG-Hge"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>

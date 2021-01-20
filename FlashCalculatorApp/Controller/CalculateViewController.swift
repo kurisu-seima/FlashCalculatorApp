@@ -16,7 +16,15 @@ class CalculateViewController: UIViewController {
     var timerCount = FlashCalculatorManager.shared.numberOfQuestion + 1
     
     var gokei: Int = 0
-        
+    
+    var maxNumber: Int {
+        return FlashCalculatorManager.shared.maxValue
+    }
+    
+    var minNumber: Int {
+        return FlashCalculatorManager.shared.minValue
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,24 +44,9 @@ class CalculateViewController: UIViewController {
             nextVC.currectAnswer = gokei
             self.present(nextVC, animated: true, completion: nil)
         } else {
-            var digitNumber: String = ""
-            switch FlashCalculatorManager.shared.numberOfDigit {
-            case 1:
-                digitNumber = String(Int.random(in: 1...9))
-                gokei += Int(digitNumber)!
-                calculateLabel.text = digitNumber
-            default:
-                for num in 1...FlashCalculatorManager.shared.numberOfDigit {
-                    switch num {
-                    case 1:
-                        digitNumber += String(Int.random(in: 1...9))
-                    default:
-                        digitNumber += String(Int.random(in: 0...9))
-                    }
-                }
-                gokei += Int(digitNumber)!
-                calculateLabel.text = digitNumber
-            }
+            let digitNumber = Int.random(in: minNumber...maxNumber)
+            gokei += digitNumber
+            calculateLabel.text = String(digitNumber)
         }
     }
 }
