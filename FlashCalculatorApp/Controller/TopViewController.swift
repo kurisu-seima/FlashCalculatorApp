@@ -25,6 +25,7 @@ class TopViewController: UIViewController {
     
     @IBAction func startButtonDidTapped(_ sender: Any) {
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "Calculate") as! CalculateViewController
+        nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: true, completion: nil)
     }
     @IBAction func levelChangeButtonDidTapped(_ sender: Any) {

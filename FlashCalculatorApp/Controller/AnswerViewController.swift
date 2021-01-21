@@ -29,6 +29,7 @@ class AnswerViewController: UIViewController {
         nextVC.currectAnswer = currectAnswer
         if let answer = Int(anserTextView.text) {
             nextVC.myAnswer = answer
+            nextVC.modalPresentationStyle = .fullScreen
             self.present(nextVC, animated: true, completion: nil)
         } else {
             anserTextView.text = "正しく入力してください"
